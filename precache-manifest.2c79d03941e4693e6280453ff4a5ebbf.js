@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "53a0b6502fdc78f84de2dbae7c380562",
+    "revision": "6c064b5e0939da8c3fcf6d5436209742",
     "url": "/react-bubbles/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-bubbles/static/css/2.c1c92ae6.chunk.css"
   },
   {
-    "revision": "145ae80f2c641541c3fd",
-    "url": "/react-bubbles/static/css/main.7a1c030a.chunk.css"
+    "revision": "1b2f6c61d1049b5544cd",
+    "url": "/react-bubbles/static/css/main.fb10b42f.chunk.css"
   },
   {
     "revision": "7b3b644195f6b2156fcf",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-bubbles/static/js/2.5a259112.chunk.js.LICENSE"
   },
   {
-    "revision": "145ae80f2c641541c3fd",
-    "url": "/react-bubbles/static/js/main.4e5e9b29.chunk.js"
+    "revision": "1b2f6c61d1049b5544cd",
+    "url": "/react-bubbles/static/js/main.06f1c469.chunk.js"
   },
   {
     "revision": "c4bc9eae047d06b33bc2",
