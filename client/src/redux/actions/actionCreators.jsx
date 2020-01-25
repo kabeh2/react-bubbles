@@ -1,6 +1,11 @@
 import axios from "axios";
 import * as actionType from "./actionTypes";
-import { apiEndpoint, setToken, axiosAuth } from "../../services/authService";
+import {
+  apiEndpoint,
+  setToken,
+  axiosAuth,
+  removeToken
+} from "../../services/authService";
 
 export const fetchRequest = () => ({
   type: actionType.FETCH_REQUEST
@@ -32,6 +37,19 @@ export const login = credentials => {
 export const toggleAuth = () => ({
   type: actionType.TOGGLE_AUTH
 });
+
+export const logout = () => {
+  return dispatch => {
+    dispatch(fetchRequest());
+
+    try {
+      removeToken();
+      dispatch(toggleAuth());
+    } catch (error) {
+      dispatch(fetchError(error));
+    }
+  };
+};
 
 export const getColours = () => {
   return async dispatch => {
@@ -82,6 +100,32 @@ export const saveColor = (id, color, colorList) => {
       await axiosAuth().put(`/colors/${id}`, color);
     } catch (error) {
       // 4. Revert back to old state
+      await dispatch(updateError(error, colorCopy));
+    }
+  };
+};
+
+export const fetchAdd = data => ({
+  type: actionType.FETCH_ADD,
+  payload: data
+});
+
+export const addColor = (colorList, data) => {
+  return async dispatch => {
+    await dispatch(fetchRequest());
+
+    // Optimistically add color
+    // 1. Make copy of colorList
+    const colorCopy = [...colorList];
+
+    // 2. update state
+    await dispatch(fetchAdd(data));
+
+    // update server
+    try {
+      const { data: color } = await axiosAuth().post("/colors", data);
+      console.log("FETCHADD", color);
+    } catch (error) {
       await dispatch(updateError(error, colorCopy));
     }
   };

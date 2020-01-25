@@ -67,7 +67,7 @@ body,
 }
 
 form {
-  margin: 60px auto;
+  // margin: 60px auto;
   display: flex;
   flex-direction: column;
 
@@ -82,7 +82,7 @@ form {
   label {
     display: flex;
     justify-content: space-between;
-    padding: 4px 36px 4px 40px;
+    padding: 4px 36px 4px 0;
   }
 
   input {
@@ -114,4 +114,9 @@ form {
   &--name {
     margin-right: 8px;
   }
+}
+
+.error {
+  text-align: left;
+  color: red;
 }

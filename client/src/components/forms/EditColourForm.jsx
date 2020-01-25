@@ -2,38 +2,68 @@ import React from "react";
 
 const EditColourForm = ({
   saveEdit,
+  addNewColor,
   setColorToEdit,
+  setColorToAdd,
+  colorToAdd,
   colorToEdit,
-  setEditing
+  cancelBtn
 }) => {
   return (
     <>
-      <form onSubmit={saveEdit}>
+      <form
+        onSubmit={
+          colorToEdit.color || colorToEdit.code.hex ? saveEdit : addNewColor
+        }
+      >
         <legend>edit color</legend>
         <label>
           color name:
           <input
             onChange={e =>
-              setColorToEdit({ ...colorToEdit, color: e.target.value })
+              colorToEdit.color || colorToEdit.code.hex
+                ? setColorToEdit({
+                    ...colorToEdit,
+                    color: e.target.value
+                  })
+                : setColorToAdd({
+                    ...colorToAdd,
+                    color: e.target.value,
+                    id: Date.now()
+                  })
             }
-            value={colorToEdit.color}
+            value={
+              colorToEdit.color || colorToEdit.code.hex
+                ? colorToEdit.color
+                : colorToAdd.color
+            }
           />
         </label>
         <label>
           hex code:
           <input
             onChange={e =>
-              setColorToEdit({
-                ...colorToEdit,
-                code: { hex: e.target.value }
-              })
+              colorToEdit.color || colorToEdit.code.hex
+                ? setColorToEdit({
+                    ...colorToEdit,
+                    code: { hex: e.target.value }
+                  })
+                : setColorToAdd({
+                    ...colorToAdd,
+                    code: { hex: e.target.value },
+                    id: Date.now()
+                  })
             }
-            value={colorToEdit.code.hex}
+            value={
+              colorToEdit.code.hex || colorToEdit.color
+                ? colorToEdit.code.hex
+                : colorToAdd.code.hex
+            }
           />
         </label>
         <div className="button-row">
           <button type="submit">save</button>
-          <button onClick={() => setEditing(false)}>cancel</button>
+          <button onClick={cancelBtn}>cancel</button>
         </div>
       </form>
     </>

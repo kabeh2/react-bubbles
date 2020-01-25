@@ -2,6 +2,7 @@ import React from "react";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
 import { connect } from "react-redux";
+import { Button } from "semantic-ui-react";
 import MyTextInput from "./MyTextInput";
 import { login } from "../../redux/actions";
 
@@ -53,7 +54,9 @@ const LoginForm = ({ location, history, login }) => {
             placeholder="Password here..."
           />
 
-          <button type="submit">Submit</button>
+          <Button primary type="submit" style={{ marginTop: 16 }}>
+            Login
+          </Button>
         </Form>
       </Formik>
     </>
