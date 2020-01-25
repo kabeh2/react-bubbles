@@ -8,7 +8,12 @@ const MyTextInput = ({ label, ...props }) => {
   const [field, meta] = useField(props);
   return (
     <>
-      <label htmlFor={props.id || props.name}>{label}</label>
+      <label
+        htmlFor={props.id || props.name}
+        style={{ padding: "4px 36px 4px 0px" }}
+      >
+        {label}
+      </label>
       <Input
         className="text-input"
         {...field}

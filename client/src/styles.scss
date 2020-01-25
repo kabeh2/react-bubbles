@@ -31,8 +31,7 @@ body,
 }
 
 .colors-wrap {
-  position: absolute;
-  height: auto;
+  height: 100%;
   width: 300px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 
@@ -67,7 +66,7 @@ body,
 }
 
 form {
-  // margin: 60px auto;
+  margin-top: 60px;
   display: flex;
   flex-direction: column;
 
@@ -82,7 +81,7 @@ form {
   label {
     display: flex;
     justify-content: space-between;
-    padding: 4px 36px 4px 0;
+    padding: 4px 36px 4px 40px;
   }
 
   input {
@@ -104,19 +103,11 @@ form {
   }
 }
 
-.color-list {
-  display: flex;
-
-  &--btn {
-    margin-right: 16px;
-  }
-
-  &--name {
-    margin-right: 8px;
-  }
+.color-list--name {
+  margin-right: 8px;
 }
 
 .error {
-  text-align: left;
   color: red;
+  text-align: left;
 }
