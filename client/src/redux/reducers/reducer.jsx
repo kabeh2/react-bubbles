@@ -20,13 +20,22 @@ export const reducer = (state = initialState, action) => {
         ...state,
         loading: false,
         data: action.payload,
-        error: ""
+        error: "",
+        loggedIn: true
       };
     case actionType.FETCH_ERROR:
       return {
         ...state,
         loading: false,
-        error: action.payload
+        error: action.payload,
+        loggedIn: false
+      };
+    case actionType.FETCH_ADD:
+      return {
+        ...state,
+        loading: false,
+        data: [...state.data, action.payload],
+        error: ""
       };
     case actionType.UPDATE_ERROR:
       return {
