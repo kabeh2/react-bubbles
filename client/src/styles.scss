@@ -31,7 +31,8 @@ body,
 }
 
 .colors-wrap {
-  height: 100%;
+  position: absolute;
+  height: auto;
   width: 300px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 
@@ -43,14 +44,19 @@ body,
       cursor: pointer;
       padding: 6px 0;
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-start;
       width: 100%;
+
+      a {
+        display: flex;
+      }
     }
   }
 }
 
 .delete {
   color: rgb(216, 87, 87);
+  margin-right: 16px;
 }
 
 .color-box {
@@ -61,7 +67,7 @@ body,
 }
 
 form {
-  margin-top: 60px;
+  margin: 60px auto;
   display: flex;
   flex-direction: column;
 
@@ -95,5 +101,17 @@ form {
     color: white;
     padding: 3px 8px;
     margin-top: 16px;
+  }
+}
+
+.color-list {
+  display: flex;
+
+  &--btn {
+    margin-right: 16px;
+  }
+
+  &--name {
+    margin-right: 8px;
   }
 }
