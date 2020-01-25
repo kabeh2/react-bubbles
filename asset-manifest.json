@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/react-bubbles/static/css/main.7a1c030a.chunk.css",
+    "main.js": "/react-bubbles/static/js/main.4e5e9b29.chunk.js",
+    "main.js.map": "/react-bubbles/static/js/main.4e5e9b29.chunk.js.map",
+    "runtime-main.js": "/react-bubbles/static/js/runtime-main.575c0af8.js",
+    "runtime-main.js.map": "/react-bubbles/static/js/runtime-main.575c0af8.js.map",
+    "static/css/2.c1c92ae6.chunk.css": "/react-bubbles/static/css/2.c1c92ae6.chunk.css",
+    "static/js/2.5a259112.chunk.js": "/react-bubbles/static/js/2.5a259112.chunk.js",
+    "static/js/2.5a259112.chunk.js.map": "/react-bubbles/static/js/2.5a259112.chunk.js.map",
+    "index.html": "/react-bubbles/index.html",
+    "precache-manifest.bcf998efc7abb47892a55c78f5fd10de.js": "/react-bubbles/precache-manifest.bcf998efc7abb47892a55c78f5fd10de.js",
+    "service-worker.js": "/react-bubbles/service-worker.js",
+    "static/css/2.c1c92ae6.chunk.css.map": "/react-bubbles/static/css/2.c1c92ae6.chunk.css.map",
+    "static/css/main.7a1c030a.chunk.css.map": "/react-bubbles/static/css/main.7a1c030a.chunk.css.map",
+    "static/js/2.5a259112.chunk.js.LICENSE": "/react-bubbles/static/js/2.5a259112.chunk.js.LICENSE",
+    "static/media/semantic.min.css": "/react-bubbles/static/media/outline-icons.ef60a4f6.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.575c0af8.js",
+    "static/css/2.c1c92ae6.chunk.css",
+    "static/js/2.5a259112.chunk.js",
+    "static/css/main.7a1c030a.chunk.css",
+    "static/js/main.4e5e9b29.chunk.js"
+  ]
+}
